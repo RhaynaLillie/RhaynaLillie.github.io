@@ -1,0 +1,214 @@
+---
+title: "Ecosystem Change in the Uncompahgre Region<br/>
+of Southwest Colorado"
+subtitle: "<br/>By Rhayna Lillie"
+author: "With special thanks to Randy Swaty and The LANDFIRE Team,<br/> and Northern Michigan University for the<br/>Opportunity to Present"
+date: "August 26, 2022"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: inverse
+# Presentation Goals
+* Present professional quality maps made using raster data downloaded from [LANDFIRE](https://landfire.gov/viewer/).
+* Contribute to [BLM](https://www.blm.gov/colorado) work in the Uncompahgre region by processing, mapping, and charting [LANDFIRE](https://landfire.gov/) data within a Colorado administrative boundary.
+* Visualize ecosystem change using a variety of [R charts](https://r-graph-gallery.com/) and [ArcGIS Pro](https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview) maps to display the data.
+
+![Mountains](Images\mountainpeaksaspen.jpg)
+???
+These maps will contribute...
+Providing examples of ways to visualize ecosystem
+---
+class: inverse
+# Road Map 
+* Introduce the Uncompahgre region and its diverse ecology.
+* Explore past and present vegetation abundance through charts and maps.
+* Visualize change from multiple points of view using different methods.
+* Consider a historic fire regime and existing vegetation height and cover.
+
+![Mountains](Images\aspenmixedconiferdrive.jpg)
+???
+Just to give you all a little overview of what to expect in this presentation,  
+I will first introduce the Uncompahgre region and its diverse ecology
+
+then we will explore past and present vegetation abundance through charts and maps
+using LANDFIRE data sets
+
+This will include a few different chart examples used to visualize change.
+
+and finally, we will look at the historic fire regime, as well as the existing vegetation height and cover for this region.
+
+---
+class: inverse
+# Introduction to the Uncompahgre Region 
+* The Uncompahgre Plateau is located in western Colorado, near the state’s border with Utah. 
+* The plateau is located in parts of five counties and around 75 percent of the plateau is public land.
+* The boundaries are marked by the Colorado River to the north, the San Miguel and Dolores rivers in the west, and the Gunnison and Uncompahgre rivers to the east.
+
+![Mountains](Images\Uncompahgre-Plateau-Colorado.jpg)
+
+???
+The plateau is part of the larger Colorado Plateau, 
+which covers much of Colorado, Arizona, Utah, New Mexico, and a small part of Nevada.
+Additionally, the plateau is located in parts of five counties and around 75 percent of the plateau is public land.
+
+The boundaries of this region, are marked by the Colorado River to the north, the San Miguel and Dolores rivers in the west, and the Gunnison and Uncompahgre rivers to the east.
+While the region is generally arid, a variety of flora and fauna inhabit the Uncompahgre Plateau.
+The plant species vary by elevation and a variety of plants are found near the many rivers of the region.
+
+---
+class: inverse
+# Pre-colonization Ecosystems 
+.middle[![BPS Chart](Charts\BPS_Chart.jpeg)]
+
+???
+To begin my data analysis, I started by finding the Top 10 biophysical settings for the uncompahgre
+landscape
+
+This Chart represents the proportion of the landscape that each species occupied based on modeled historical data
+
+We can see that the top 4 ecosystem types... shared the largest percentage of the landscape historically. 
+
+These four ecosystem types will be a main focus of my analysis as the constitute a large proportion of this region's ecosystem. 
+
+A chart is one way to represent this data, but a map made using LANDFIRE data helps to put things 
+into context...
+---
+class:inverse
+# Pre-colonization Ecosystems
+.center[![BPS Top 90%](Maps\BPS landscape.jpg)]
+
+???
+Here is a map of the biophysical settings data showing the historical 
+ecosystems of the uncompahgre region
+This allows us to see how the various ecosystems flow into each other,
+creating a vast amount of biodiversity within the landscape
+
+Since, much of the land has been protected, this biodiversity has been mostly maintained
+
+---
+class: inverse
+# Existing Vegetation Types
+.center[![EVT Top 90%](Maps\EVT Landscape.jpg)]
+
+???
+As we can see, agriculture has increased in the region along with some development taking place in the center of the map. 
+One difference you may notice is a decrease in orange on the map and an increase in yellow. 
+If you didn't I'll give you a chance now
+
+From this comparison we can see that there is some change between the big sgaebrush and pinyon juniper categories
+---
+class: inverse
+# Existing Vegetation Types
+.center[![EVT Chart](Charts\evt_chart.jpeg)]
+
+???
+This change is captured in our chart as the ecosystem big sagebrush shrubland, is much lower in relative percentage than pinyon juniper woodland. close grown crops 
+and pasture hayland also make their way into the top 10 for relative 
+abundance in this existing vegetation data set
+
+To explore this phenomenon further, a Sankey graph is a great way to visualize 
+what is going where, 
+---
+class: inverse
+# Exploring Change
+![Sankey Graph](Images\SankeyCapture.jpg)
+???
+With this chart, we can see what vegetation groups the historical data is being sorted into which existing ecosystem type
+This code creates an interactive html file making it an exciting visual.
+
+With this, we can highlight each grouping to see which how each category might be changing
+
+---
+class: inverse
+# Exploring Change
+.center[![Chart of 4 BPS to EVT](Charts\Change_charts.jpeg)]
+
+???
+Another way to explore this change is by using simple bar charts.
+This allows us to take a closer look at each biophysical settings category 
+and determine percent acreage converted int the existing eocystem types
+
+we capture the change between big sagebrush and pinyon juniper in the top right graph as we can see the category that represents the highest percent conversion of big sagebrush is the pinyon juniper woodland. The other categories display very little change by comparison
+---
+class: inverse
+# Exploring Change
+.center[![Chart of 4 BPS to EVT](Charts\VCA_charts.jpeg)]
+
+???
+Similarly, we can use diverging bar charts to indicate which succession classes are over and under represented by the data set
+These succession classes represent what stage of succession each ecosystem is in and these change graphs allow us to see how succession may have changed over time
+---
+class: inverse
+# Historic Fire Regime
+.center[![ALLFRI_ Fire Return Interval](Maps\Fire Return Interval.jpg)]
+
+???
+Succession and fire seem to have a lot to do with each other and a closer comparison
+between the Biophysical settings map and this fire return interval map, allows the viewer to make connections between ecosystem type and the interval of time between fires
+
+Building on that information
+---
+class: inverse
+# Historic Fire Regime
+.center[![FRI Chart](Charts\FRI_chart.jpeg)]
+
+???
+A chart of the annual acres burned within each biophysical settings category
+furthers the reader's understanding of 
+the region and its historic fire cycle
+
+Fire has many important relationships within the ecology of the landscape,
+and to further explore this landscape
+---
+class: inverse
+# Vegetation Height
+.center[![EVH Map](Maps\Vegetation Height1.jpg)]
+
+???
+vegetation height can be mapped throughout the region
+
+If you notice in the center of the map, there is a large are of low vegetation height where we find most of our agricultural and developed regions
+
+The higher elevation trees and shrubs can even be distinguished due to their darker contrast
+---
+class: inverse
+# Vegetation Cover
+.center[![EVC Map](Maps\Vegetation Cover1.jpg)]
+
+???
+This map is very similar but is now based on a different part of the data set
+displaying the percentage of cover for each vegetation type.
+
+These maps help us to visualize patterns and to, 
+paint the picture of how development and many other ecosystem changes may have shaped the region 
+
+---
+class: inverse
+# In Summary
+* I can visualize [LANDFIRE](https://landfire.gov/) data using simple [techniques](https://r-graph-gallery.com/) and strategies.
+* Learned more about this changing landscape through data modeling and [coding](https://remarkjs.com/#1).
+* Help to understand trends and patterns across multiple maps and charts based on the options available within this [data repository](https://www.landfire.gov/viewer/).
+
+![EVH Map](Images\Grand-Junction.jpg)
+
+???
+after working through this project.....
+---
+class: inverse
+# Thank You for Viewing my Presentation!
+Want to connect? Feel free to reach out at my [Portfolio.](https://rhaynalillie.github.io/) or      [LinkedIn](.right[![Profile picture](Images\DroneProfile.jpg)]
+)!
+
+.center[![Profile picture](Images\SkiProfile.jpg)]
+
+---
+class: inverse, center, middle
+#Any Questions?
+
+---
+
